@@ -95,12 +95,12 @@ export const getAllAuctionItems = () => async (dispatch) => {
       { withCredentials: true }
     );
     dispatch(auctionSlice.actions.getAllAuctionItemSuccess(res.data.items));
-    toast.success(res.data.message);
+   
     dispatch(auctionSlice.actions.resetSlice());
   } catch (error) {
     dispatch(auctionSlice.actions.getAllAuctionItemFailed());
-    toast.error(error.res.data.message);
-
+   
+ console.error(error);
     dispatch(auctionSlice.actions.resetSlice());
   }
 };
