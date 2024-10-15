@@ -99,8 +99,7 @@ export const getAllAuctionItems = () => async (dispatch) => {
     dispatch(auctionSlice.actions.resetSlice());
   } catch (error) {
     dispatch(auctionSlice.actions.getAllAuctionItemFailed());
-   
- console.error(error);
+    console.error(error);
     dispatch(auctionSlice.actions.resetSlice());
   }
 };
@@ -113,11 +112,10 @@ export const getAuctionDetail = (id) => async (dispatch) => {
       { withCredentials: true }
     );
     dispatch(auctionSlice.actions.getAuctionDetailSuccess(res.data));
-    toast.success(res.data.message);
     dispatch(auctionSlice.actions.resetSlice());
   } catch (error) {
     dispatch(auctionSlice.actions.getAuctionDetailFailed());
-    toast.error(error.res.data.message);
+     console.error(error);
     dispatch(auctionSlice.actions.resetSlice());
   }
 };
