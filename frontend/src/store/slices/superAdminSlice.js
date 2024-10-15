@@ -107,7 +107,7 @@ export const getMonthlyRevenue = () => async (dispatch) => {
   try {
     dispatch(superAdminSlice.actions.requestForMonthlyRevenue());
     const response = await axios.get(
-      "http://localhost:5000/api/v1/superadmin/monthlyincome",
+      "https://bidmaster-backend.onrender.com/api/v1/superadmin/monthlyincome",
       {
         withCredentials: true,
       }
@@ -127,7 +127,7 @@ export const getAllUsers = () => async (dispatch) => {
   try {
     dispatch(superAdminSlice.actions.requestForAllUsers());
     const response = await axios.get(
-      "http://localhost:5000/api/v1/superadmin/users/getall",
+      "https://bidmaster-backend.onrender.com/api/v1/superadmin/users/getall",
       {
         withCredentials: true,
       }
@@ -143,7 +143,7 @@ export const getAllPaymentProofs = () => async (dispatch) => {
   try {
     dispatch(superAdminSlice.actions.requestForPaymentProofs());
     const response = await axios.get(
-      "http://localhost:5000/api/v1/superadmin/paymentproofs/getall",
+      "https://bidmaster-backend.onrender.com/api/v1/superadmin/paymentproofs/getall",
       {
         withCredentials: true,
       }
@@ -163,7 +163,7 @@ export const deletePaymentProof = (id) => async (dispatch) => {
   try {
     dispatch(superAdminSlice.actions.requestForPaymentProofDelete());
     const response = await axios.delete(
-      `http://localhost:5000/api/v1/superadmin/paymentproof/delete/${id}`,
+      `https://bidmaster-backend.onrender.com/api/v1/superadmin/paymentproof/delete/${id}`,
       {
         withCredentials: true,
       }
@@ -182,7 +182,7 @@ export const getSinglePaymentProofDetail = (id) => async (dispatch) => {
   try {
     dispatch(superAdminSlice.actions.requestForSinglePaymentProofDetail());
     const response = await axios.get(
-      `http://localhost:5000/api/v1/superadmin/paymentproof/${id}`,
+      `https://bidmaster-backend.onrender.com/api/v1/superadmin/paymentproof/${id}`,
       {
         withCredentials: true,
       }
@@ -202,7 +202,7 @@ export const updatePaymentProof = (id, status, amount) => async (dispatch) => {
   try {
     dispatch(superAdminSlice.actions.requestForUpdatePaymentProof());
     const response = await axios.put(
-      `http://localhost:5000/api/v1/superadmin/paymentproof/status/update/${id}`,
+      `https://bidmaster-backend.onrender.com/api/v1/superadmin/paymentproof/status/update/${id}`,
       { status, amount },
       {
         withCredentials: true,
@@ -224,7 +224,7 @@ export const deleteAuctionItem = (id) => async (dispatch) => {
   try {
     dispatch(superAdminSlice.actions.requestForDeleteAuctionItem());
     const response = await axios.delete(
-      `http://localhost:5000/api/v1/superadmin/auctionitem/delete/${id}`,
+      `https://bidmaster-backend.onrender.com/api/v1/superadmin/auctionitem/delete/${id}`,
 
       {
         withCredentials: true,
