@@ -1,5 +1,6 @@
 # BidMaster
 BidMaster is a full-stack auction management platform designed for users to create, bid, and manage auctions in a seamless and intuitive manner. The platform includes a dynamic user interface built with React and Tailwind CSS, alongside a robust backend powered by Express.js and MongoDB Atlas. BidMaster also features user authentication, automated email notifications, and a comprehensive dashboard for super admin.
+## Website: https://lambent-cendol-15b0ae.netlify.app/
 ## Features
 ### Backend:
 MongoDB Atlas: Cloud database solution for storing all application data.
